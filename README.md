@@ -1,4 +1,4 @@
-<br/> <h1 style="background: Orange; Color:white; margin: auto; padding: auto;"> Welcome to SirajShaon's GitHub Pages </h1> <hr/> <br/>
+<br/> <div style="background: Orange; Color:white; margin: auto; padding: auto;"> <h1> Welcome to SirajShaon's GitHub Pages </h1> </div> <hr/> <br/>
 
 <br/><h1 style="background: green; Color:red; margin: auto; padding: auto; width: 200px;">Click Here to go to sign up page</h1><br/>
 <h1 style="color: maroon; font-size:48px;">My-Coursera</h1>
