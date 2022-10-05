@@ -1,0 +1,27 @@
+.navbar{
+    background-image: url(../images/signup/Heading-Background.jpg);
+    height: 100px;
+    margin: auto;
+}
+.nav-heading{
+    color: whitesmoke;
+    font-size: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 9px;
+}
+body{
+    background-image: url(../images/signup/BG.jpeg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form {
+	margin: auto;
+	padding-top: 10px;
+	border-radius: 5px;
+	border: 1px #02020203 solid;
+	width: 400px;
+	height: 500;
+	background: #0000004d;
+	position:relative;
+}
