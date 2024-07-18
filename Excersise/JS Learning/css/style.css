@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body{
+  background: none repeat scroll 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.healthTracking{
+  width: 100%;
+  clear: both;
+  padding: 45px 0;
+}
+.mainBox{
+  width: 98%;
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+}
+.mainBox h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.contentArea{
+  display: flex;
+}
+.contentBox {
+  background: #fd586b;
+  color: #fff;
+  width: 25%;
+  margin: 0 1% 10px;
+  padding: 45px 30px;
+  border-radius: 25px;
+}
+.contentBox:nth-child(1) {
+  background: #feaa48;
+}
+.contentBox:nth-child(2) {
+  background: #36deed;
+}
+.contentBox:nth-child(3) {
+  background: #4d58de;
+}
+.contentBox i{
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.contentBox h5{
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  margin: 0 0 10px;
+}
+.contentBox p{
+  margin: 0;
+}

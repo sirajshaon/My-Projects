@@ -1,0 +1,158 @@
+.game {
+  /* position: relative; */
+  /* display: inline-block; */
+}
+.gameBtn {
+  background-image: linear-gradient(90deg, #162a2b, #007290);
+  color: white;
+  padding: 6px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bolder;
+}
+
+.show {
+  display: block !important;
+}
+
+.gameBtn:hover,
+.gameBtn:focus {
+  color: #ffa250;
+}
+/* //////////////////// */
+/* Tic Tac Toe  */
+/* /////////////////// */
+
+.tictactoe {
+  background-image: linear-gradient(90deg, #162a2b, #007290);
+  color: #ffa250;
+  font-family: Oswald, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: none;
+  /* border-radius: 400px 0 0 0; */
+}
+
+.tictactoe table {
+  cursor: pointer;
+  border-collapse: collapse;
+  border-radius: 45px;
+  box-shadow: 20px 20px 50px #b3b3b3, -20px -20px 50px #ffffff;
+}
+
+.tictactoe table td,
+table th {
+  border: 3px solid #c0c0c0;
+}
+.tictactoe table tr:first-child td {
+  border-top: 0;
+}
+.tictactoe table tr:last-child td {
+  border-bottom: 0;
+}
+.tictactoe table tr td:first-child,
+.tictactoe table tr th:first-child {
+  border-left: 0;
+}
+.tictactoe table tr td:last-child,
+.tictactoe table tr th:last-child {
+  border-right: 0;
+}
+
+#game tr td {
+  width: 60px;
+  height: 80px;
+}
+
+#banner {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+#options {
+  display: flex;
+  justify-content: center;
+}
+
+#choice {
+  text-align: center;
+  padding: 30px 0;
+}
+
+#game {
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+#details {
+  display: flex;
+  flex-wrap: wrap;
+}
+#accordion {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.tictactoe button {
+  width: 70px;
+  padding: 5px;
+  background-color: transparent;
+  border: 2px solid #c0c0c0;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+  color: #a0bfff;
+}
+#anotherGame {
+  display: none;
+  padding: 30px;
+}
+
+/*Added by Eduardo Sanchez*/
+
+.tictactoe h1 {
+  font-family: "Ruslan Display", cursive;
+  font-size: 72px;
+}
+
+.tictactoe .down-dots,
+.up-dots,
+.placeholder {
+  clear: both;
+  width: 100%;
+  height: 20px;
+}
+
+.tictactoe .down-dots .fa,
+.up-dots .fa {
+  display: none;
+}
+
+.tictactoe .center-space {
+  height: 80px;
+  color: #c0c0c0;
+}
+
+.tictactoe .center-space .fa {
+  position: relative;
+  top: 10%;
+}
+
+.tictactoe .fa-dot-circle-o {
+  font-size: 14px;
+  color: #c0c0c0;
+}
+
+.tictactoe .fa-stop-circle {
+  color: #ffd700;
+}
+
+#result {
+  padding-top: 80px;
+}

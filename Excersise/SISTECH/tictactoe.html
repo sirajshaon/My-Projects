@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* CSS Styling */
+    .container {
+      text-align: center;
+    }
+    
+    .game-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .game-logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+    
+    .start-button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .board {
+      display: flex;
+      flex-wrap: wrap;
+      width: 300px;
+      margin: 0 auto;
+    }
+    
+    .board div {
+      box-sizing: border-box;
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="game-title">Tic Tac Toe</h1>
+    <img class="game-logo" src="https://via.placeholder.com/100" alt="Tic Tac Toe Logo"> <!-- Replace with your logo URL -->
+    <button class="start-button">Start Game</button>
+    <div class="board">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  
+    <script>
+      // JavaScript Logic
+ // JavaScript Logic
+document.addEventListener('DOMContentLoaded', function() {
+  const startButton = document.querySelector('.start-button');
+  const board = document.querySelector('.board');
+  const cells = Array.from(board.children);
+  let currentPlayer = 'X';
+  let gameStarted = false;
+
+  // Initialize the game
+  function initGame() {
+    cells.forEach(cell => {
+      cell.textContent = '';
+      cell.addEventListener('click', handleClick, { once: true });
+    });
+  }
+
+  // Handle cell click event
+  function handleClick(e) {
+    const cell = e.target;
+    cell.textContent = currentPlayer;
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    checkWinner();
+  }
+
+  // Check for a winning combination
+  function checkWinner() {
+    const winningCombinations = [
+      [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+      [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+      [0, 4, 8], [2, 4, 6]             // Diagonals
+    ];
+
+    for (let combination of winningCombinations) {
+      const [a, b, c] = combination;
+      if (
+        cells[a].textContent &&
+        cells[a].textContent === cells[b].textContent &&
+        cells[a].textContent === cells[c].textContent
+      ) {
+        setTimeout(() => {
+          alert(cells[a].textContent + ' wins!');
+          initGame();
+        }, 100);
+        return;
+      }
+    }
+
+    if (cells.every(cell => cell.textContent)) {
+      setTimeout(() => {
+        alert("It's a tie!");
+        initGame();
+      }, 100);
+    }
+  }
+
+  // Start the game on button click
+  startButton.addEventListener('click', function() {
+    gameStarted = true;
+    startButton.disabled = true;
+    initGame();
+  });
+});
+
+    </script>
+
+</body>
+</html>
