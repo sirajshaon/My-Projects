@@ -1,114 +1,192 @@
 /* body default */
-*{margin: 0px; padding: 0px;}
-a{
-    text-decoration: none;
-    color: bisque;
+* {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  color: bisque;
 }
 /* heder section */
-header{
-    font-family: Arial, Helvetica, sans-serif;
+header {
+  font-family: Arial, Helvetica, sans-serif;
 }
-.container{
-    width: 1140px;
-    margin: auto;
+.container {
+  width: 1140px;
+  margin: auto;
 }
-.nav_wraper{
-    width: 100%;
-    height: 150px;
+.nav_wraper {
+  width: 100%;
+  height: 150px;
 }
-.profile_area{
-    width: 570px;
-    height: 150px;
-    float: left;
-    background: #015673;
-    border-radius: 75px 0px 0px 75px;
+.profile_area {
+  width: 570px;
+  height: 150px;
+  float: left;
+  /* background: #015673; */
+  border-radius: 75px 0px 0px 0px;
+  background-image: linear-gradient(90deg, #162a2b, #007290);
 }
-.profile_pic{
-    width: 150px;
-    height: 150px;
-    float: left;
-    overflow: hidden;
+.profile_pic {
+  width: 150px;
+  height: 150px;
+  float: left;
+  overflow: hidden;
 }
-.profile_pic img{
-    width: 100%;
-    border-radius: 75px;
-    overflow: hidden;
+.profile_pic img {
+  width: 100%;
+  border-radius: 0 75px 75px 75px;
+  overflow: hidden;
 }
-.profile_text{
-    width: 400px;
-    float: right;
-    text-align: left;
-    padding: 25px 0;
-    color: #83f2ff;
+.profile_text {
+  width: 400px;
+  float: right;
+  text-align: left;
+  padding: 25px 0;
 }
 .profile_text h1 {
-    font-size: 45px;
-    color: #dcf9ff;
+  font-size: 45px;
+  color: #dcf9ff;
+  animation: nameAnimate 10s infinite;
+}
+@keyframes nameAnimate {
+  50% {
+    color: #ffa250;
+  }
 }
 .profile_text a h1:hover {
-    color: #ffa250;
+  color: #ffa250;
 }
-.menu_area{
-    float: left;
-    width: 570px;
-    height: 150px;
-    background: #007290;
+.profile_text h3 {
+  color: #ffa250;
+  animation: textAnimate 10s infinite;
+}
+@keyframes textAnimate {
+  50% {
+    color: #dcf9ff;
+  }
+}
+.menu_area {
+  float: left;
+  width: 570px;
+  height: 150px;
+  background: #007290;
 }
 ul.nav_menu {
-    list-style: none;
-    float: right;
+  list-style: none;
+  float: right;
 }
 
 ul.nav_menu li {
-    padding: 63px 10px;
-    font-size: 20px;
-    float: left;
-    position: relative;
+  padding: 63px 10px;
+  font-size: 20px;
+  float: left;
+  position: relative;
 }
 ul.nav_menu li a {
-    color: #dcf9ff;
+  color: #dcf9ff;
 }
 ul.sub_menu {
-    list-style: none;
-    background: #015673;
-    width: 135px;
-    position: absolute;
-    left: 0px;
-    top: 150px;
-    float: none;
-    border-radius: 0 0 25px 25px;
-    transition: 0.5s;
-    opacity: 0;
-    transform: scaleY(0);
-    transform-origin: top;
+  list-style: none;
+  background: #015673;
+  width: 135px;
+  position: absolute;
+  left: 0px;
+  top: 150px;
+  float: none;
+  border-radius: 0 0 25px 25px;
+  transition: 0.5s;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
 }
 ul.social {
-    width: 85px;
-    text-align: center;
+  width: 85px;
+  text-align: center;
 }
 ul.sub_menu li {
-    padding: 10px 10px;
-    font-size: 15px;
-    float: none;
+  padding: 10px 10px;
+  font-size: 15px;
+  float: none;
 }
 
-ul.nav_menu li:hover a{
-    
-    color: #ffa250;
+ul.nav_menu li:hover a {
+  color: #ffa250;
 }
 ul.nav_menu li:hover {
-    background: #015673;
+  background: #015673;
 }
 ul.nav_menu li:hover .sub_menu {
-    transform: scale(1);
-    opacity: 1;
+  transform: scale(1);
+  opacity: 1;
 }
-ul.sub_menu li:hover a{
-    color: #83f2ff;
+ul.sub_menu li:hover a {
+  color: #83f2ff;
 }
 ul.sub_menu li:hover {
-    text-align: center;
-    transform: scale(1.2);
-    border-radius: 50%;
-    background-color: #007290;
+  text-align: center;
+  transform: scale(1.2);
+  border-radius: 50%;
+  background-color: #007290;
+}
+
+/* about ME sectio */
+
+.aboutme_wraper {
+  background: linear-gradient(180deg, #52a1ec, #b59734);
+  display: flex;
+}
+
+.about_pic {
+  width: 105%;
+}
+
+.about_pic img {
+  height: 100%;
+}
+
+about_text {
+  padding: 20px;
+  text-align: justify;
+  color: #dcf9ff;
+}
+
+about_text h2 {
+  margin-bottom: 10px;
+  background: linear-gradient(270deg, #830d0d, #dcf9f8);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+about_text p {
+  margin: 10px;
+  background: linear-gradient(270deg, #a0bfff, #f9ff00);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* circuit block section */
+
+.circuit_wraper {
+  background-color: #b59734;
+  display: flex;
+}
+.circuit_name {
+  width: 300px;
+  padding: 20px 5px 20px;
+  text-align: right;
+  float: left;
+  color: #dcf9ff;
+}
+.circuit_block a {
+  font-size: x-large;
+  font-variant-caps: petite-caps;
+}
+.circuit_block {
+  width: 700px;
+  padding: 20px 5px 20px;
+  text-align: left;
+  float: right;
+  border-left: 2px solid burlywood;
+  color: #dcf9ff;
 }
